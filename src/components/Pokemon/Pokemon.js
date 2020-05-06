@@ -11,7 +11,8 @@ class Pokemon extends React.Component {
             back_default: "",
             front_default: ""
         },
-        types: []
+        types: [],
+        typeSelected: "cardContainer "
     };
 
     componentDidMount() {
@@ -28,7 +29,8 @@ class Pokemon extends React.Component {
                     back_default: pokemon.data.sprites.back_default,
                     front_default: pokemon.data.sprites.front_default
                 },
-                types: pokemon.data.types
+                types: pokemon.data.types,
+                typeSelected: this.state.typeSelected + this.getClass(pokemon.data.types[0].type.name)
             });
             console.log(this.state);
         })
@@ -58,12 +60,19 @@ class Pokemon extends React.Component {
         }
     }
 
-    render() {
-        let classStyle = "cardContainer ";
-        classStyle += this.state.types.length > 0 ? this.getClass(this.state.types[0].type.name) : "";
+    handleTypeChange(type) {
+        this.setState({
+            ...this.state,
+            typeSelected: "cardContainer " + this.getClass(type)
+        });
+    }
 
+    render() {
+        if(this.state.id === "") {
+            return null;
+        }
         return(
-        <div className={classStyle}>
+        <div className={this.state.typeSelected}>
             <div>
                 <p className="cardTitle">#</p>
                 <p>{this.state.id}</p>
@@ -75,14 +84,23 @@ class Pokemon extends React.Component {
             <div>
                 <p className="cardTitle">Images:</p>
                 <br />
-                <img className="cardImage" src={this.state.sprites.front_default} alt="back_default"/>
-                <img className="cardImage" src={this.state.sprites.back_default} alt="front_default"/>
+                <img
+                    className="cardImage"
+                    src={this.state.sprites.front_default}
+                    alt="back_default"/>
+                <img
+                    className="cardImage"
+                    src={this.state.sprites.back_default}
+                    alt="front_default"/>
             </div>
             <div>
                 <p className="cardTitle">Types</p>
                 <div>
-                    {this.state.types.map(e => {
-                        return <p key={e.slot} className="cardType">{e.type.name}</p>;
+                    {this.state.types.map(element => {
+                        return <p
+                                key={element.slot}
+                                onClick={() => this.handleTypeChange(element.type.name)}
+                                className="cardType">{element.type.name}</p>;
                     })}
                 </div>
             </div>

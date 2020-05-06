@@ -39,11 +39,24 @@
     margin: 10px;
 }
 
+.cardImage:hover {
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+}
+
 .cardType {
     text-transform: capitalize;
     font-weight: bold;
+    padding: 5px;
+    border: 1px solid #fff;
+    border-radius: 5px;
 }
 
+.cardType:hover {
+    background-color: rgba(256,256,256,0.2);
+    cursor: pointer;
+}
+
+/** CARDS COLORS*/
 .fireType {
     background-image:  radial-gradient(red, darkred);
 }
@@ -56,8 +69,12 @@
     background-image: radial-gradient(rgb(0, 132, 255), rgb(3, 44, 92));
 }
 
-.grassType, .bugType{
-    background-image: radial-gradient(rgb(51, 255, 0), rgb(3, 92, 30));
+.grassType{
+    background-image: radial-gradient(rgb(0, 255, 98), rgb(2, 78, 25));
+}
+
+.bugType {
+    background-image: radial-gradient(rgb(169, 255, 30),rgb(74, 110, 34));
 }
 
 .poisonType {
