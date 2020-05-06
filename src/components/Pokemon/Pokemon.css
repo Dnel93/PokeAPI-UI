@@ -1,0 +1,69 @@
+.cardContainer {
+    background-color: rgba(256,256,256,0.2);
+    width: 250px;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 15px 5px;
+    color: #fff;
+    box-shadow: 5px 5px 1px rgba(0,0,0,0.15);
+    display: inline-block;
+}
+
+.cardContainer:hover {
+    border: 2px solid rgba(256,256,256,1);
+    margin: 8px;
+}
+
+    .cardContainer > div > p, .cardContainer > div > div > p {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .cardContainer > div > img {
+        display: inline-block;
+    }
+
+.cardTitle {
+    font-weight: bold;
+    margin: 10px auto;
+    color: yellow;
+}
+
+.cardTitle + p {
+    text-transform: capitalize;
+}
+
+.cardImage {
+    box-shadow:  10px 10px 10px rgba(0,0,0,0.2);
+    border-radius: 100%;
+    margin: 10px;
+}
+
+.cardType {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.fireType {
+    background-image:  radial-gradient(red, darkred);
+}
+
+.electricType {
+    background-image: radial-gradient(#fff200,#ffbb00);
+}
+
+.waterType{
+    background-image: radial-gradient(rgb(0, 132, 255), rgb(3, 44, 92));
+}
+
+.grassType, .bugType{
+    background-image: radial-gradient(rgb(51, 255, 0), rgb(3, 92, 30));
+}
+
+.poisonType {
+    background-image: radial-gradient(rgb(102, 48, 230), rgb(48, 8, 141));
+}
+
+.flyingType{
+    background-image: radial-gradient(rgb(184, 184, 184),rgb(97, 97, 97))
+}

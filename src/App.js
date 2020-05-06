@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Pokemon from './components/Pokemon/Pokemon';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Pokemon name="Bulbasaur" />
+      <Pokemon name="Ivysaur" />
+      <Pokemon name="Venusaur" />
+      <Pokemon name="Charmander" />
+      <Pokemon name="Charmeleon" />
+      <Pokemon name="Charizard" />
+      <Pokemon name="Squirtle" />
+      <Pokemon name="Wartortle" />
+      <Pokemon name="Blastoise" />
+      <Pokemon name="Caterpie" />
+      <Pokemon name="Metapod" />
+      <Pokemon name="Butterfree" />
     </div>
   );
 }
