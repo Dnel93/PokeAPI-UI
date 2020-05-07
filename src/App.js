@@ -1,22 +1,18 @@
 import React from 'react';
 import './App.css';
-import Pokemon from './components/Pokemon/Pokemon';
+
+import Leftbar from './components/Leftbar/Leftbar';
+import Content from './components/Content/Content';
 
 function App() {
   return (
     <div className="App">
-      <Pokemon name="Bulbasaur" />
-      <Pokemon name="Ivysaur" />
-      <Pokemon name="Venusaur" />
-      <Pokemon name="Charmander" />
-      <Pokemon name="Charmeleon" />
-      <Pokemon name="Charizard" />
-      <Pokemon name="Squirtle" />
-      <Pokemon name="Wartortle" />
-      <Pokemon name="Blastoise" />
-      <Pokemon name="Caterpie" />
-      <Pokemon name="Metapod" />
-      <Pokemon name="Butterfree" />
+      <div className="container-fluid h-100">
+        <div className="row">
+            <Leftbar />
+            <Content />
+        </div>
+      </div>
     </div>
   );
 }

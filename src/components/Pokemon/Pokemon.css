@@ -11,7 +11,7 @@
 
 .cardContainer:hover {
     border: 2px solid rgba(256,256,256,1);
-    margin: 8px;
+    margin: 8px 10px;
 }
 
     .cardContainer > div > p, .cardContainer > div > div > p {

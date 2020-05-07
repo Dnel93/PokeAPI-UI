@@ -1,0 +1,5 @@
+.Leftbar > h1 {
+    font-family: "Pokemon";
+    margin: 10px;
+    text-shadow: 4px 4px 5px rgba(0,0,0,1);
+}
