@@ -20,7 +20,7 @@ class Pokemon extends React.Component {
     }
 
     getPokemon() {
-        axios.get(`http://localhost:8080/v1/Pokemon/${this.props.name}`).then(pokemon => {
+        axios.get(`http://localhost:5000/v1/Pokemon/${this.props.name}`).then(pokemon => {
             this.setState({
                 ...this.state,
                 id: pokemon.data.id,
@@ -32,7 +32,6 @@ class Pokemon extends React.Component {
                 types: pokemon.data.types,
                 typeSelected: this.state.typeSelected + this.getClass(pokemon.data.types[0].type.name)
             });
-            console.log(this.state);
         })
         .catch(() => {
             console.log("Couldn't retrieve pokemon")
@@ -55,6 +54,8 @@ class Pokemon extends React.Component {
                 return "flyingType";
             case "bug":
                 return "bugType";
+            case "normal":
+                return "normalType";
             default:
                 return "";
         }

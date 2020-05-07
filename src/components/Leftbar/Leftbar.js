@@ -1,10 +1,19 @@
 import React from 'react';
-
+import {getPokemon} from '../../services/poke-api';
 import './Leftbar.css';
 
 function Leftbar() {
     function handleOnSubmit(e) {
         e.preventDefault();
+    }
+
+    function handleKeyPress(e) {
+        if(e.keyCode === 13) {
+            getPokemon(e.target.value).then(pokemon => {
+                console.log(pokemon);
+            });
+            e.target.value = "";
+        }
     }
 
 
@@ -16,10 +25,7 @@ function Leftbar() {
                 <div>
                     <form onSubmit={handleOnSubmit}>
                         <div className="form-group">
-                            <input type="text" className="form-control bg-dark text-light" placeholder="Pikachu, Entei..."/>
-                        </div>
-                        <div className="form-group">
-                            <input type="button" value="Search" className="btn btn-light"/>
+                            <input type="text" className="form-control bg-dark text-light" onKeyDown={handleKeyPress} placeholder="Pikachu, Entei..."/>
                         </div>
                     </form>
                 </div>

@@ -37,6 +37,7 @@
     box-shadow:  10px 10px 10px rgba(0,0,0,0.2);
     border-radius: 100%;
     margin: 10px;
+    transition: ease-in 0.25s;
 }
 
 .cardImage:hover {
@@ -49,6 +50,7 @@
     padding: 5px;
     border: 1px solid #fff;
     border-radius: 5px;
+    transition: ease-out 0.25s;
 }
 
 .cardType:hover {
@@ -65,11 +67,11 @@
     background-image: radial-gradient(#fff200,#ffbb00);
 }
 
-.waterType{
+.waterType {
     background-image: radial-gradient(rgb(0, 132, 255), rgb(3, 44, 92));
 }
 
-.grassType{
+.grassType {
     background-image: radial-gradient(rgb(0, 255, 98), rgb(2, 78, 25));
 }
 
@@ -81,6 +83,10 @@
     background-image: radial-gradient(rgb(102, 48, 230), rgb(48, 8, 141));
 }
 
-.flyingType{
-    background-image: radial-gradient(rgb(184, 184, 184),rgb(97, 97, 97))
+.flyingType {
+    background-image: radial-gradient(rgb(196, 235, 235),rgb(115, 139, 139))
+}
+
+.normalType {
+    background-image: radial-gradient(rgb(224, 224, 189),rgb(136, 136, 114));
 }

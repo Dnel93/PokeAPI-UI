@@ -20,10 +20,20 @@ function Content() {
                 <Pokemon name="Wartortle" />
                 <Pokemon name="Blastoise" />
 
-                <Pokemon name="Squirtle" />
-                <Pokemon name="Wartortle" />
-                <Pokemon name="Blastoise" />
+                <Pokemon name="10" />
+                <Pokemon name="11" />
+                <Pokemon name="12" />
 
+                <Pokemon name="13" />
+                <Pokemon name="14" />
+                <Pokemon name="15" />
+
+                <Pokemon name="16" />
+                <Pokemon name="17" />
+                <Pokemon name="18" />
+
+                <Pokemon name="Chikorita" />
+                <Pokemon name="Togepi" />
             </div>
         </div>
     );
