@@ -1,6 +1,8 @@
 # PokeAPI-UI
 In PokeAPI-UI you can show your favorite Pokemons in a web page, the Pokemon will show in a Card where you can see a few details of this creatures
 
+![UI](https://github.com/Dnel93/PokeAPI-UI/blob/master/public/UI.png)
+
 ## Important
 To be able to run the application, is necessary to run PokeAPI service available [here](https://github.com/Dnel93/PokeAPI)
 
