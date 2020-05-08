@@ -31,9 +31,6 @@ function Content() {
                 <Pokemon name="16" />
                 <Pokemon name="17" />
                 <Pokemon name="18" />
-
-                <Pokemon name="Chikorita" />
-                <Pokemon name="Togepi" />
             </div>
         </div>
     );
