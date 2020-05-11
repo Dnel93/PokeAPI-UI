@@ -1,4 +1,5 @@
 .content {
     padding: 10px;
     position: absolute;
+    background-image: linear-gradient(#889199,#6C757D,#535a60);
 }

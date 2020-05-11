@@ -1,5 +1,20 @@
-.Leftbar > h1 {
+.Leftbar {
+    background-image: linear-gradient(#343A40,#1a1e21,#0c0d0f);
+    color: #ffffff;
+}
+
+
+.Leftbar-Header {
     font-family: "Pokemon";
     margin: 10px;
     text-shadow: 4px 4px 5px rgba(0,0,0,1);
+}
+
+.twitter-account {
+    color: rgb(143, 143, 143);
+}
+
+.twitter-account:hover {
+    text-decoration: none;
+    color: rgb(143,143,143)
 }
