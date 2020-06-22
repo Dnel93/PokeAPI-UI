@@ -2,12 +2,12 @@ import React from 'react';
 import {getPokemon} from '../../services/poke-api';
 import './Leftbar.css';
 
-function Leftbar() {
-    function handleOnSubmit(e) {
+const Leftbar = () => {
+    const handleOnSubmit = (e) => {
         e.preventDefault();
     }
 
-    function handleKeyPress(e) {
+    const handleKeyPress = (e) => {
         if(e.keyCode === 13) {
             getPokemon(e.target.value).then(pokemon => {
                 console.log(pokemon);
@@ -17,7 +17,7 @@ function Leftbar() {
     }
 
 
-    return(
+    return (
         <div className="col-2 h-100 py-2 d-flex justify-content-center fixed-top Leftbar">
             <div>
                 <h1 className="Leftbar-Header">PokeAPI</h1>
