@@ -20,7 +20,7 @@ class Pokemon extends React.Component {
     }
 
     getPokemon() {
-        axios.get(`http://localhost:5000/v1/Pokemon/${this.props.name}`).then(pokemon => {
+        axios.get(`http://localhost:5000/v1/${this.props.name}`).then(pokemon => {
             this.setState({
                 ...this.state,
                 id: pokemon.data.id,

@@ -6,7 +6,7 @@ const initialState = {
     ]
 };
 
-const pokemonServiceReducer = (state=initialState, action) => {
+const pokemonServiceReducer = (state = initialState, action) => {
     switch(action.type) {
         case ADD_POKEMON:
             return {
