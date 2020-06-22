@@ -4,7 +4,7 @@ In PokeAPI-UI you can take a look to your favorite Pokemons in a web page, the P
 ![UI](https://github.com/Dnel93/PokeAPI-UI/blob/master/public/UI.png)
 
 ## Important
-To be able to run the application, is necessary to run PokeAPI service available [here](https://github.com/Dnel93/PokeAPI)
+To be able to run the application, is necessary to initiate PokeAPI service available [here](https://github.com/Dnel93/PokeAPI)
 
 ## Available Scripts
 ### `npm start`
