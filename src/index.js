@@ -9,7 +9,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 
-import App from './components/App';
+import App from './routes/App';
 
 import reducers from './redux/reducers';
 
