@@ -1,21 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import ReactDOM from 'react-dom';
 
-import {Provider} from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import reduxThunk from 'redux-thunk';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
-import { createStore } from 'redux';
-import pokemonServiceReducer from './redux/reducers/pokemon-service-reducer';
 
-const initialState = {};
+import App from './components/App';
+
+import reducers from './redux/reducers';
 
 const store = createStore(
-  pokemonServiceReducer,
-  initialState,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  reducers,
+  {},
+  composeWithDevTools(applyMiddleware(reduxThunk))
 );
 
 ReactDOM.render(

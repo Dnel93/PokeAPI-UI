@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 
-import Leftbar from './components/Leftbar/Leftbar';
-import Content from './components/Content/Content';
+import Leftbar from './Leftbar/Leftbar';
+import Content from './Content/Content';
 
 function App() {
   return (

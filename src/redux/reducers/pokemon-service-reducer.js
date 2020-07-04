@@ -1,19 +1,31 @@
-import {ADD_POKEMON, SEARCH_POKEMON} from '../actions/pokemon-service-actions';
+import { GET_POKEMON, GET_POKEMON_FAILURE, GET_POKEMON_SUCCESS} from '../actions/types';
 
 const initialState = {
-    pokemonList: [
-        {name: "Pikachu"}
-    ]
+    pokemonList: [],
+    isLoading: false,
+    error: ''
 };
 
 const pokemonServiceReducer = (state = initialState, action) => {
     switch(action.type) {
-        case ADD_POKEMON:
+        case GET_POKEMON:
             return {
                 ...state,
-                pokemonList: [...state.pokemonList,  action.pokemon]
+                isLoading: true
             };
-        case SEARCH_POKEMON:
+        case GET_POKEMON_FAILURE:
+            return {
+                ...state,
+                error: action.payload,
+                isLoading: false
+            };
+        case GET_POKEMON_SUCCESS:
+            return {
+                ...state,
+                pokemonList: [...state.pokemonList, action.payload],
+                error: '',
+                isLoading: false
+            }
         default:
             return state;
     }
