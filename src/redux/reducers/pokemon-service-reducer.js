@@ -2,7 +2,8 @@ import {
   GET_POKEMON,
   GET_POKEMON__FAILURE,
   GET_POKEMON__SUCCESS,
-  GET_POKEMON__ALREADY_EXIST
+  GET_POKEMON__ALREADY_EXIST,
+  ALERT__CLOSED
 } from '../actions/types';
 
 const initialState = {
@@ -35,6 +36,11 @@ const pokemonServiceReducer = (state = initialState, action) => {
       return {
         ...state,
         isLoading: false
+      };
+    case ALERT__CLOSED:
+      return {
+        ...state,
+        error: ''
       };
     default:
       return state;

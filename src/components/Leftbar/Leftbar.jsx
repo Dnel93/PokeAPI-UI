@@ -4,6 +4,7 @@ import * as pokemonServiceActions from '../../redux/actions/pokemon-service-acti
 import './Leftbar.css';
 
 import Spinner from '../Spinner/Spinner';
+import Alert from '../Alert/Alert';
 
 const Leftbar = props => {
   const handleOnSubmit = e => {
@@ -38,6 +39,7 @@ const Leftbar = props => {
           </form>
         </div>
         {props.isLoading && <Spinner />}
+        {props.error && <Alert error={props.error} />}
         <hr />
         <a className='twitter-account' href='https://twitter.com/nikedanz'>
           @Nikedanz
