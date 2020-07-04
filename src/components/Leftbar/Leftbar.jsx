@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import * as pokemonServiceActions from '../../redux/actions/pokemon-service-actions';
 import './Leftbar.css';
 
+import Spinner from '../Spinner/Spinner';
+
 const Leftbar = props => {
   const handleOnSubmit = e => {
     e.preventDefault();
@@ -35,6 +37,7 @@ const Leftbar = props => {
             </div>
           </form>
         </div>
+        {props.isLoading && <Spinner />}
         <hr />
         <a className='twitter-account' href='https://twitter.com/nikedanz'>
           @Nikedanz
@@ -44,4 +47,8 @@ const Leftbar = props => {
   );
 };
 
-export default connect(null, pokemonServiceActions)(Leftbar);
+const mapStateToProps = reducers => {
+  return reducers.pokemonServiceReducer;
+};
+
+export default connect(mapStateToProps, pokemonServiceActions)(Leftbar);

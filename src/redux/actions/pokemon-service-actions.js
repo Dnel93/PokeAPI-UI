@@ -1,27 +1,43 @@
 import axios from 'axios';
 
-import { GET_POKEMON, GET_POKEMON_FAILURE, GET_POKEMON_SUCCESS } from './types';
+import {
+  GET_POKEMON,
+  GET_POKEMON__FAILURE,
+  GET_POKEMON__SUCCESS,
+  GET_POKEMON__ALREADY_EXIST
+} from './types';
 
-export const getPokemon = (pokemonName) => async (dispatch) => {
+export const getPokemon = pokemonName => async (dispatch, getState) => {
   try {
+    const { pokemonList } = getState().pokemonServiceReducer;
+
     dispatch({
       type: GET_POKEMON
     });
 
-    console.log(pokemonName);
-    console.log('All Ive got this far');
-    const serviceCall = await axios.get(
-      `http://localhost:5000/v1/${pokemonName}`
+    const pokemonExist = pokemonList.filter(
+      pokemon => pokemon.name === pokemonName
     );
-    console.log(serviceCall);
-    dispatch({
-      type: GET_POKEMON_SUCCESS,
-      payload: serviceCall.data
-    });
+
+    if (pokemonExist.length > 0) {
+      dispatch({
+        type: GET_POKEMON__ALREADY_EXIST
+      });
+    } else {
+      const serviceCall = await axios.get(
+        `http://localhost:5000/v1/${pokemonName}`
+      );
+
+      dispatch({
+        type: GET_POKEMON__SUCCESS,
+        payload: serviceCall.data
+      });
+    }
+
   } catch (error) {
     console.error(`An error has ocurred: ${error.message}`);
     dispatch({
-      type: GET_POKEMON_FAILURE,
+      type: GET_POKEMON__FAILURE,
       error: error.message
     });
   }

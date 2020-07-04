@@ -29,15 +29,17 @@
     color: yellow;
 }
 
-.cardTitle + p {
-    text-transform: capitalize;
-}
+    .cardTitle + p {
+        text-transform: capitalize;
+    }
 
 .cardImage {
     box-shadow:  10px 10px 10px rgba(0,0,0,0.2);
     border-radius: 100%;
     margin: 10px;
     transition: ease-in 0.25s;
+    width: 96px;
+    height: 96px;
 }
 
 .cardImage:hover {
@@ -53,10 +55,10 @@
     transition: ease-out 0.25s;
 }
 
-.cardType:hover {
-    background-color: rgba(256,256,256,0.2);
-    cursor: pointer;
-}
+    .cardType:hover {
+        background-color: rgba(256,256,256,0.2);
+        cursor: pointer;
+    }
 
 /** CARDS COLORS*/
 .fireType {
