@@ -4,7 +4,7 @@ import './Home.css';
 import Leftbar from '../../components/Leftbar/Leftbar';
 import Content from '../../components/Content/Content';
 
-function App() {
+const Home = () => {
   return (
     <div className="App">
       <div className="container-fluid h-100">
@@ -17,4 +17,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
