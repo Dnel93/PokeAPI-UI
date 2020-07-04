@@ -9,7 +9,7 @@ const Content = (props) => {
 
     const showPokemons = () => {
         const {pokemonList} = props;
-        return pokemonList.map(pokemon => {
+        return pokemonList.slice(0).reverse().map(pokemon => {
             return <Pokemon
                         key={pokemon.id}
                         pokemon={pokemon}
