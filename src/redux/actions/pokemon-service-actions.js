@@ -7,7 +7,7 @@ import {
   GET_POKEMON__ALREADY_EXIST
 } from './types';
 
-export const getPokemon = pokemonName => async (dispatch, getState) => {
+export const getPokemon = pokemonReceived => async (dispatch, getState) => {
   try {
     const { pokemonList } = getState().pokemonServiceReducer;
 
@@ -16,7 +16,7 @@ export const getPokemon = pokemonName => async (dispatch, getState) => {
     });
 
     const pokemonExist = pokemonList.filter(
-      pokemon => pokemon.name === pokemonName
+      pokemon => pokemon.name === pokemonReceived || pokemon.id === parseInt(pokemonReceived)
     );
 
     if (pokemonExist.length > 0) {
@@ -25,7 +25,7 @@ export const getPokemon = pokemonName => async (dispatch, getState) => {
       });
     } else {
       const serviceCall = await axios.get(
-        `http://localhost:5000/v1/${pokemonName}`
+        `http://localhost:5000/v1/${pokemonReceived}`
       );
 
       dispatch({
@@ -38,7 +38,7 @@ export const getPokemon = pokemonName => async (dispatch, getState) => {
     console.error(`An error has ocurred: ${error.message}`);
     dispatch({
       type: GET_POKEMON__FAILURE,
-      error: error.message
+      payload: error.message
     });
   }
 };
