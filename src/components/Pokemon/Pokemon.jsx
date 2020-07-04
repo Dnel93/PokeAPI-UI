@@ -31,6 +31,10 @@ class Pokemon extends Component {
         return 'bugType';
       case 'normal':
         return 'normalType';
+      case 'psychic':
+        return 'psychicType';
+      case 'dragon':
+        return 'dragonType';
       default:
         return '';
     }

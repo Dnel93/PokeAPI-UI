@@ -92,3 +92,11 @@
 .normalType {
     background-image: radial-gradient(rgb(224, 224, 189),rgb(136, 136, 114));
 }
+
+.psychicType {
+    background-image: radial-gradient(rgb(224, 189, 224),rgb(136, 114, 134));
+}
+
+.dragonType {
+    background-image: radial-gradient(rgb(149, 96, 218),rgb(94, 56, 119));
+}
