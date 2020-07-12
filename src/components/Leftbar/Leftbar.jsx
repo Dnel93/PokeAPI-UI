@@ -1,10 +1,8 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import * as pokemonServiceActions from '../../redux/actions/pokemon-service-actions';
 import './Leftbar.css';
 
 import Spinner from '../Spinner/Spinner';
-import Alert from '../Alert/Alert';
+import Alert from '../../containers/Alert/Alert';
 
 const Leftbar = props => {
   const handleOnSubmit = e => {
@@ -49,8 +47,6 @@ const Leftbar = props => {
   );
 };
 
-const mapStateToProps = reducers => {
-  return reducers.pokemonServiceReducer;
-};
 
-export default connect(mapStateToProps, pokemonServiceActions)(Leftbar);
+
+export default Leftbar;

@@ -1,8 +1,8 @@
 import React from 'react';
 import './Home.css';
 
-import Leftbar from '../../components/Leftbar/Leftbar';
-import Content from '../../components/Content/Content';
+import Leftbar from '../../containers/Leftbar/Leftbar';
+import Content from '../../containers/Content/Content';
 
 const Home = () => {
   return (

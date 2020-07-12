@@ -1,20 +1,17 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
-import { closeAlert } from '../../redux/actions/pokemon-service-actions';
-
-const Alert = (props) => {
+const Alert = ({error, closeAlert}) => {
   return (
     <div
       className='alert alert-danger alert-dismissible fade show'
       role='alert'
     >
-      {props.error}
+      {error}
       <button
         type='button'
         className='close'
         id='closeAlert'
-        onClick={props.closeAlert}
+        onClick={closeAlert}
       >
         <span aria-hidden='true'>&times;</span>
       </button>
@@ -22,4 +19,4 @@ const Alert = (props) => {
   );
 };
 
-export default connect(null, {closeAlert})(Alert);
+export default Alert;
