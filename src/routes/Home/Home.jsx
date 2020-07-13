@@ -6,7 +6,7 @@ import Content from '../../containers/Content/Content';
 
 const Home = () => {
   return (
-    <div className="App">
+    <div className="Home" data-testid='Home'>
       <div className="container-fluid h-100">
         <div className="row">
             <Leftbar />

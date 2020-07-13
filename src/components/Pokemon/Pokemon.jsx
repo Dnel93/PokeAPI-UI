@@ -51,7 +51,7 @@ class Pokemon extends Component {
     const { pokemon } = this.props;
 
     return (
-      <div className={this.state.typeSelected}>
+      <div className={this.state.typeSelected} data-testid='Pokemon'>
         <div>
           <p className='cardTitle'>#</p>
           <p>{pokemon.id}</p>
@@ -87,6 +87,7 @@ class Pokemon extends Component {
                   key={element.slot}
                   onClick={() => this.handleTypeChange(element.type.name)}
                   className='cardType'
+                  data-testid='cardType'
                 >
                   {element.type.name}
                 </p>

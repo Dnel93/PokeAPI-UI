@@ -5,6 +5,7 @@ const Alert = ({error, closeAlert}) => {
     <div
       className='alert alert-danger alert-dismissible fade show'
       role='alert'
+      data-testid="Alert-ErrorMessage"
     >
       {error}
       <button
@@ -12,6 +13,7 @@ const Alert = ({error, closeAlert}) => {
         className='close'
         id='closeAlert'
         onClick={closeAlert}
+        data-testid="Alert-CloseButton"
       >
         <span aria-hidden='true'>&times;</span>
       </button>
